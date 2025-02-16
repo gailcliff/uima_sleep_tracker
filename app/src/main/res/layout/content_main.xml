@@ -81,7 +81,6 @@
                     android:textColor="@color/black"
                     android:autoLink="web"
                     android:text="@string/sleeping_time_placeholder"
-                    android:onClick="showTimePickerDialog"
                     />
             </LinearLayout>
             <View
@@ -114,7 +113,6 @@
                     android:textColor="@color/black"
                     android:autoLink="web"
                     android:text="@string/sleeping_time_placeholder"
-                    android:onClick="showTimePickerDialog"
                     />
             </LinearLayout>
         </LinearLayout>
@@ -170,6 +168,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="@string/warning_icon"
+        android:visibility="invisible"
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -183,6 +182,7 @@
         android:layout_marginBottom="20dp"
         >
         <Button
+            android:id="@+id/undo_btn"
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:layout_height="wrap_content"
@@ -195,9 +195,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:enabled="false"
             />
         <Button
+            android:id="@+id/submit_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -206,7 +206,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:backgroundTint="@color/colorPrimaryDark"
             android:textColor="@color/purple1"
-            android:text="Submit"
+            android:text="@string/submit"
             android:textSize="18sp"
             android:fontFamily="sans-serif"
             android:textStyle="bold"
